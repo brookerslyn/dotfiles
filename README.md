@@ -31,28 +31,40 @@ My Hyprland rice on CachyOS. Material You theming via [matugen](https://github.c
 
 ## Install
 
+### Quick install
+
 ```bash
-# Required packages (Arch / CachyOS)
+git clone https://github.com/<you>/dotfiles ~/dotfiles
+cd ~/dotfiles
+./install.sh
+```
+
+The installer:
+- Detects (or installs) yay
+- Installs all required packages
+- Backs up any existing configs to `~/.config/dotfiles_backup_<timestamp>/`
+- Copies the configs into `~/.config/`
+- Makes scripts executable
+- Sets up the lua config provider for Hyprland
+
+### Manual install
+
+```bash
 yay -S \
   hyprland hypridle quickshell-git \
   matugen-bin waypaper rofi-wayland swaync \
   kitty cliphist wl-clipboard grim slurp hyprpicker \
-  brightnessctl playerctl wpctl \
+  brightnessctl playerctl wireplumber \
   cava wlogout \
   ttf-jetbrains-mono-nerd noto-fonts-cjk
 
-# Clone
 git clone https://github.com/<you>/dotfiles ~/dotfiles
 cd ~/dotfiles
+cp -rn .config/* ~/.config/
 
-# Symlink configs
-stow -t ~ . 2>/dev/null || cp -rn .config/* ~/.config/
-
-# Make scripts executable
 chmod +x ~/.config/hypr/scripts/*.sh
 find ~/.config/hypr/scripts/quickshell -name "*.sh" -exec chmod +x {} \;
 
-# First wallpaper to generate matugen colors
 waypaper
 ```
 
