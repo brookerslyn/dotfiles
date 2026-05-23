@@ -1,0 +1,28 @@
+:root {
+  /* Background layers */
+  --bg-deepest: {{colors.surface_container_lowest.default.hex}};
+  --bg-base: {{colors.surface.default.hex}};
+  --bg-elev-1: {{colors.surface_container_low.default.hex}};
+  --bg-elev-2: {{colors.surface_container.default.hex}};
+  --bg-elev-3: {{colors.surface_container_high.default.hex}};
+  --bg-hover: {{colors.surface_container_highest.default.hex}};
+
+  /* Text */
+  --text: {{colors.on_surface.default.hex}};
+  --text-dim: {{colors.on_surface_variant.default.hex}};
+  --text-muted: {{colors.outline.default.hex}};
+  --text-faint: {{colors.outline_variant.default.hex}};
+
+  /* Borders */
+  --border: {{colors.surface_container.default.hex}};
+  --border-strong: {{colors.surface_container_highest.default.hex}};
+
+  /* Accent */
+  --accent: {{colors.primary.default.hex}};
+  --accent-bg: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12);
+  --accent-border: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3);
+
+  /* Status */
+  --danger: {{colors.error.default.hex}};
+  --success: {{colors.tertiary.default.hex}};
+}

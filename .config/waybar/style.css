@@ -1,0 +1,124 @@
+@import "colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+tooltip {
+    background: rgba(14, 20, 22, 0.92);
+    border: 1px solid rgba(131, 213, 197, 0.2);
+    border-radius: 10px;
+    color: @fg;
+}
+
+/* === Module group backgrounds (split glass panels) === */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(14, 20, 22, 0.72);
+    border-radius: 14px;
+    border: 1px solid rgba(131, 213, 197, 0.08);
+    padding: 2px 6px;
+    margin: 3px 0;
+}
+
+/* === All modules base === */
+#clock,
+#tray,
+#workspaces,
+#mpris,
+#custom-swaync,
+#pulseaudio,
+#pulseaudio.microphone,
+#network,
+#custom-power {
+    padding: 4px 12px;
+    border-radius: 10px;
+    margin: 2px 2px;
+}
+
+/* === Workspaces === */
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    color: rgba(222, 228, 225, 0.4);
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin: 3px 2px;
+}
+
+#workspaces button:hover {
+    color: @primary;
+    background: rgba(131, 213, 197, 0.1);
+}
+
+#workspaces button.active {
+    color: @on_primary;
+    background: @primary;
+    border-radius: 8px;
+}
+
+#workspaces button.urgent {
+    color: @error;
+}
+
+/* === Clock === */
+#clock {
+    color: @fg;
+}
+
+/* === Mpris - with hover tooltip for player widget === */
+#mpris {
+    color: @primary;
+    font-style: italic;
+    padding: 4px 16px;
+}
+
+/* === Tray === */
+#tray {
+    padding: 4px 8px;
+}
+
+/* === Audio group === */
+#pulseaudio {
+    color: @fg;
+}
+
+#pulseaudio.microphone {
+    color: @secondary;
+}
+
+#pulseaudio.muted {
+    color: rgba(222, 228, 225, 0.3);
+}
+
+/* === Network === */
+#network {
+    color: @primary;
+}
+
+/* === Notifications === */
+#custom-swaync {
+    color: @fg;
+}
+
+/* === Power === */
+#custom-power {
+    color: @error;
+}
+
+/* === Separators (invisible spacers between groups) === */
+#custom-separator {
+    color: transparent;
+    padding: 0;
+    margin: 0;
+}
